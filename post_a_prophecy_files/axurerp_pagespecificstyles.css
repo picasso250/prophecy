@@ -61,7 +61,7 @@ div {
 .u2 {
     position:absolute;
     left:10px;
-    top:195px;
+    top:230px;
     width:580px;
     height:144px;
     ;
@@ -104,5 +104,23 @@ div {
     font-family:Arial;
     text-align:left;
     word-wrap:break-word;
+}
+
+.u6 {
+    position:absolute;
+    left:490px;
+    top:195px;
+    width:100px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
 }
 
