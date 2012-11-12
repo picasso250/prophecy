@@ -24,9 +24,9 @@ div {
 
 .u0 {
     position:absolute;
-    left:10px;
+    left:50px;
     top:70px;
-    width:580px;
+    width:540px;
     height:25px;
     ;
     ;
@@ -43,7 +43,7 @@ div {
 .u1 {
     position:absolute;
     left:10px;
-    top:105px;
+    top:221px;
     width:580px;
     height:80px;
     ;
@@ -61,7 +61,7 @@ div {
 .u2 {
     position:absolute;
     left:10px;
-    top:230px;
+    top:356px;
     width:580px;
     height:144px;
     ;
@@ -80,7 +80,7 @@ div {
     position:absolute;
     left:10px;
     top:10px;
-    width:140px;
+    width:170px;
     height:50px;
 }
 
@@ -88,16 +88,16 @@ div {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:146px;
+    width:176px;
     height:56px;
 }
 
 .u4 {
     position:absolute;
     left:2px;
-    top:17px;
-    width:136px;
-    height:16px;
+    top:14px;
+    width:166px;
+    height:22px;
     ;
     ;
     ;
@@ -108,13 +108,59 @@ div {
 
 .u6 {
     position:absolute;
-    left:490px;
-    top:195px;
-    width:100px;
-    height:25px;
+    left:460px;
+    top:311px;
+    width:130px;
+    height:39px;
     ;
     ;
     text-align: center;;
+    font-family:'Arial';
+    font-size: 18px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u7 {
+    position:absolute;
+    left:10px;
+    top:74px;
+    width:50px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8 {
+    position:absolute;
+    left:10px;
+    top:105px;
+    width:580px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9 {
+    position:absolute;
+    left:80px;
+    top:140px;
+    width:140px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
     font-family:'Arial';
     font-size: 13px;
     color:#000000;
@@ -122,5 +168,33 @@ div {
     font-weight:normal;
     text-decoration:none;
     
+}
+
+.u10 {
+    position:absolute;
+    left:10px;
+    top:144px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u11 {
+    position:absolute;
+    left:10px;
+    top:175px;
+    width:580px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
 }
 

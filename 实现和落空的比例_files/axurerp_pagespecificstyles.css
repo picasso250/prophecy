@@ -57,14 +57,14 @@ div {
 }
 
 .u3_normal {
-    background-image: url('../prohecy_files/u3_normal.png');
+    background-image: url('../实现和落空的比例_files/u3_normal.png');
 }
 
 .u3_container {
     position:absolute;
     left:10px;
-    top:270px;
-    width:190px;
+    top:360px;
+    width:320px;
     height:30px;
 }
 
@@ -72,7 +72,7 @@ div {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:196px;
+    width:326px;
     height:36px;
 }
 
@@ -80,7 +80,7 @@ div {
     position:absolute;
     left:2px;
     top:7px;
-    width:186px;
+    width:316px;
     height:16px;
     ;
     ;
@@ -91,14 +91,14 @@ div {
 }
 
 .u5_normal {
-    background-image: url('../prohecy_files/u3_normal.png');
+    background-image: url('../实现和落空的比例_files/u5_normal.png');
 }
 
 .u5_container {
     position:absolute;
-    left:210px;
-    top:270px;
-    width:190px;
+    left:340px;
+    top:360px;
+    width:115px;
     height:30px;
 }
 
@@ -106,7 +106,7 @@ div {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:196px;
+    width:121px;
     height:36px;
 }
 
@@ -114,7 +114,7 @@ div {
     position:absolute;
     left:2px;
     top:7px;
-    width:186px;
+    width:111px;
     height:16px;
     ;
     ;
@@ -125,14 +125,14 @@ div {
 }
 
 .u7_normal {
-    background-image: url('../prohecy_files/u3_normal.png');
+    background-image: url('../实现和落空的比例_files/u7_normal.png');
 }
 
 .u7_container {
     position:absolute;
-    left:410px;
-    top:270px;
-    width:190px;
+    left:465px;
+    top:360px;
+    width:135px;
     height:30px;
 }
 
@@ -140,7 +140,7 @@ div {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:196px;
+    width:141px;
     height:36px;
 }
 
@@ -148,7 +148,7 @@ div {
     position:absolute;
     left:2px;
     top:7px;
-    width:186px;
+    width:131px;
     height:16px;
     ;
     ;
@@ -160,8 +160,8 @@ div {
 
 .u9 {
     position:absolute;
-    left:300px;
-    top:318px;
+    left:410px;
+    top:408px;
     width:70px;
     height:16px;
     ;
@@ -174,8 +174,8 @@ div {
 
 .u10 {
     position:absolute;
-    left:100px;
-    top:318px;
+    left:180px;
+    top:408px;
     width:80px;
     height:16px;
     ;
@@ -188,8 +188,8 @@ div {
 
 .u11 {
     position:absolute;
-    left:480px;
-    top:318px;
+    left:510px;
+    top:408px;
     width:120px;
     height:16px;
     ;
@@ -202,8 +202,8 @@ div {
 
 .u12 {
     position:absolute;
-    left:10px;
-    top:310px;
+    left:90px;
+    top:400px;
     width:140px;
     height:33px;
     ;
@@ -216,8 +216,8 @@ div {
 
 .u13 {
     position:absolute;
-    left:210px;
-    top:310px;
+    left:320px;
+    top:400px;
     width:130px;
     height:33px;
     ;
@@ -230,8 +230,8 @@ div {
 
 .u14 {
     position:absolute;
-    left:410px;
-    top:310px;
+    left:440px;
+    top:400px;
     width:130px;
     height:33px;
     ;
@@ -243,7 +243,7 @@ div {
 }
 
 .u15_line {
-    background-image: url('../prohecy_files/u15_line.png');
+    background-image: url('../实现和落空的比例_files/u15_line.png');
 }
 
 .u15_line {
@@ -257,7 +257,7 @@ div {
 .u15 {
     position:absolute;
     left:10px;
-    top:250px;
+    top:340px;
     width:590px;
     height:10px;
     
@@ -266,7 +266,7 @@ div {
 .u16 {
     position:absolute;
     left:10px;
-    top:160px;
+    top:250px;
     width:590px;
     height:80px;
     ;
@@ -395,13 +395,13 @@ div {
 }
 
 .u25_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
+    background-image: url('../实现和落空的比例_files/u25_normal.png');
 }
 
 .u25_container {
     position:absolute;
     left:20px;
-    top:350px;
+    top:480px;
     width:20px;
     height:20px;
 }
@@ -429,13 +429,13 @@ div {
 }
 
 .u27_normal {
-    background-image: url('../prohecy_files/u27_normal.png');
+    background-image: url('../实现和落空的比例_files/u27_normal.png');
 }
 
 .u27_container {
     position:absolute;
     left:50px;
-    top:350px;
+    top:480px;
     width:50px;
     height:20px;
 }
@@ -463,13 +463,13 @@ div {
 }
 
 .u29_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
+    background-image: url('../实现和落空的比例_files/u25_normal.png');
 }
 
 .u29_container {
     position:absolute;
     left:20px;
-    top:380px;
+    top:510px;
     width:20px;
     height:20px;
 }
@@ -497,13 +497,13 @@ div {
 }
 
 .u31_normal {
-    background-image: url('../prohecy_files/u31_normal.png');
+    background-image: url('../实现和落空的比例_files/u31_normal.png');
 }
 
 .u31_container {
     position:absolute;
     left:50px;
-    top:380px;
+    top:510px;
     width:40px;
     height:20px;
 }
@@ -531,13 +531,13 @@ div {
 }
 
 .u33_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
+    background-image: url('../实现和落空的比例_files/u25_normal.png');
 }
 
 .u33_container {
     position:absolute;
     left:20px;
-    top:410px;
+    top:540px;
     width:20px;
     height:20px;
 }
@@ -565,13 +565,13 @@ div {
 }
 
 .u35_normal {
-    background-image: url('../prohecy_files/u27_normal.png');
+    background-image: url('../实现和落空的比例_files/u27_normal.png');
 }
 
 .u35_container {
     position:absolute;
     left:50px;
-    top:410px;
+    top:540px;
     width:50px;
     height:20px;
 }
@@ -599,13 +599,13 @@ div {
 }
 
 .u37_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
+    background-image: url('../实现和落空的比例_files/u37_normal.png');
 }
 
 .u37_container {
     position:absolute;
     left:30px;
-    top:460px;
+    top:590px;
     width:10px;
     height:10px;
 }
@@ -633,13 +633,13 @@ div {
 }
 
 .u39_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
+    background-image: url('../实现和落空的比例_files/u37_normal.png');
 }
 
 .u39_container {
     position:absolute;
     left:50px;
-    top:460px;
+    top:590px;
     width:10px;
     height:10px;
 }
@@ -667,13 +667,13 @@ div {
 }
 
 .u41_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
+    background-image: url('../实现和落空的比例_files/u37_normal.png');
 }
 
 .u41_container {
     position:absolute;
     left:70px;
-    top:460px;
+    top:590px;
     width:10px;
     height:10px;
 }
@@ -700,623 +700,11 @@ div {
     word-wrap:break-word;
 }
 
-.u43_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
+.u43_line {
+    background-image: url('../实现和落空的比例_files/u43_line.png');
 }
 
-.u43_container {
-    position:absolute;
-    left:220px;
-    top:350px;
-    width:20px;
-    height:20px;
-}
-
-#u43_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:26px;
-    height:26px;
-}
-
-.u44 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:16px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u45_normal {
-    background-image: url('../prohecy_files/u27_normal.png');
-}
-
-.u45_container {
-    position:absolute;
-    left:250px;
-    top:350px;
-    width:50px;
-    height:20px;
-}
-
-#u45_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:56px;
-    height:26px;
-}
-
-.u46 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:46px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u47_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
-}
-
-.u47_container {
-    position:absolute;
-    left:220px;
-    top:380px;
-    width:20px;
-    height:20px;
-}
-
-#u47_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:26px;
-    height:26px;
-}
-
-.u48 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:16px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u49_normal {
-    background-image: url('../prohecy_files/u31_normal.png');
-}
-
-.u49_container {
-    position:absolute;
-    left:250px;
-    top:380px;
-    width:40px;
-    height:20px;
-}
-
-#u49_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:46px;
-    height:26px;
-}
-
-.u50 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:36px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u51_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
-}
-
-.u51_container {
-    position:absolute;
-    left:220px;
-    top:410px;
-    width:20px;
-    height:20px;
-}
-
-#u51_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:26px;
-    height:26px;
-}
-
-.u52 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:16px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u53_normal {
-    background-image: url('../prohecy_files/u27_normal.png');
-}
-
-.u53_container {
-    position:absolute;
-    left:250px;
-    top:410px;
-    width:50px;
-    height:20px;
-}
-
-#u53_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:56px;
-    height:26px;
-}
-
-.u54 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:46px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u55_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
-}
-
-.u55_container {
-    position:absolute;
-    left:230px;
-    top:460px;
-    width:10px;
-    height:10px;
-}
-
-#u55_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:16px;
-    height:16px;
-}
-
-.u56 {
-    position:absolute;
-    left:2px;
-    top:-3px;
-    width:6px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u57_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
-}
-
-.u57_container {
-    position:absolute;
-    left:250px;
-    top:460px;
-    width:10px;
-    height:10px;
-}
-
-#u57_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:16px;
-    height:16px;
-}
-
-.u58 {
-    position:absolute;
-    left:2px;
-    top:-3px;
-    width:6px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u59_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
-}
-
-.u59_container {
-    position:absolute;
-    left:270px;
-    top:460px;
-    width:10px;
-    height:10px;
-}
-
-#u59_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:16px;
-    height:16px;
-}
-
-.u60 {
-    position:absolute;
-    left:2px;
-    top:-3px;
-    width:6px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u61_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
-}
-
-.u61_container {
-    position:absolute;
-    left:420px;
-    top:350px;
-    width:20px;
-    height:20px;
-}
-
-#u61_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:26px;
-    height:26px;
-}
-
-.u62 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:16px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u63_normal {
-    background-image: url('../prohecy_files/u27_normal.png');
-}
-
-.u63_container {
-    position:absolute;
-    left:450px;
-    top:350px;
-    width:50px;
-    height:20px;
-}
-
-#u63_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:56px;
-    height:26px;
-}
-
-.u64 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:46px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u65_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
-}
-
-.u65_container {
-    position:absolute;
-    left:420px;
-    top:380px;
-    width:20px;
-    height:20px;
-}
-
-#u65_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:26px;
-    height:26px;
-}
-
-.u66 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:16px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u67_normal {
-    background-image: url('../prohecy_files/u31_normal.png');
-}
-
-.u67_container {
-    position:absolute;
-    left:450px;
-    top:380px;
-    width:40px;
-    height:20px;
-}
-
-#u67_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:46px;
-    height:26px;
-}
-
-.u68 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:36px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u69_normal {
-    background-image: url('../prohecy_files/u25_normal.png');
-}
-
-.u69_container {
-    position:absolute;
-    left:420px;
-    top:410px;
-    width:20px;
-    height:20px;
-}
-
-#u69_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:26px;
-    height:26px;
-}
-
-.u70 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:16px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u71_normal {
-    background-image: url('../prohecy_files/u27_normal.png');
-}
-
-.u71_container {
-    position:absolute;
-    left:450px;
-    top:410px;
-    width:50px;
-    height:20px;
-}
-
-#u71_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:56px;
-    height:26px;
-}
-
-.u72 {
-    position:absolute;
-    left:2px;
-    top:2px;
-    width:46px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u73_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
-}
-
-.u73_container {
-    position:absolute;
-    left:430px;
-    top:460px;
-    width:10px;
-    height:10px;
-}
-
-#u73_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:16px;
-    height:16px;
-}
-
-.u74 {
-    position:absolute;
-    left:2px;
-    top:-3px;
-    width:6px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u75_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
-}
-
-.u75_container {
-    position:absolute;
-    left:450px;
-    top:460px;
-    width:10px;
-    height:10px;
-}
-
-#u75_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:16px;
-    height:16px;
-}
-
-.u76 {
-    position:absolute;
-    left:2px;
-    top:-3px;
-    width:6px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u77_normal {
-    background-image: url('../prohecy_files/u37_normal.png');
-}
-
-.u77_container {
-    position:absolute;
-    left:470px;
-    top:460px;
-    width:10px;
-    height:10px;
-}
-
-#u77_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:16px;
-    height:16px;
-}
-
-.u78 {
-    position:absolute;
-    left:2px;
-    top:-3px;
-    width:6px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u79_line {
-    background-image: url('../prohecy_files/u79_line.png');
-}
-
-.u79_line {
+.u43_line {
     position:absolute;
     left:4px;
     top:0px;
@@ -1324,58 +712,16 @@ div {
     height:200px;
 }
 
-.u79 {
-    position:absolute;
-    left:410px;
-    top:350px;
-    width:10px;
-    height:200px;
-    
-}
-
-.u80_line {
-    background-image: url('../prohecy_files/u80_line.png');
-}
-
-.u80_line {
-    position:absolute;
-    left:4px;
-    top:0px;
-    width:3px;
-    height:200px;
-}
-
-.u80 {
-    position:absolute;
-    left:210px;
-    top:350px;
-    width:10px;
-    height:200px;
-    
-}
-
-.u81_line {
-    background-image: url('../prohecy_files/u81_line.png');
-}
-
-.u81_line {
-    position:absolute;
-    left:4px;
-    top:0px;
-    width:3px;
-    height:200px;
-}
-
-.u81 {
+.u43 {
     position:absolute;
     left:10px;
-    top:340px;
+    top:470px;
     width:10px;
     height:200px;
     
 }
 
-#u82 {
+#u44 {
     position:absolute;
     left:10px;
     top:108px;
@@ -1384,7 +730,7 @@ div {
     overflow:hidden;
 }
 
-#pd1u82 {
+#pd1u44 {
     position:absolute;
     left:0px;
     top:0px;
@@ -1393,7 +739,7 @@ div {
     
 }
 
-.u83 {
+.u45 {
     position:absolute;
     left:0px;
     top:4px;
@@ -1407,7 +753,7 @@ div {
     word-wrap:break-word;
 }
 
-.u84 {
+.u46 {
     position:absolute;
     left:90px;
     top:2px;
@@ -1421,7 +767,44 @@ div {
     word-wrap:break-word;
 }
 
-.u85 {
+#pd0u44 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:581px;
+    height:26px;
+    
+}
+
+.u47 {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:90px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u48 {
+    position:absolute;
+    left:90px;
+    top:2px;
+    width:220px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u49 {
     position:absolute;
     left:360px;
     top:0px;
@@ -1439,7 +822,7 @@ div {
     
 }
 
-.u86 {
+.u50 {
     position:absolute;
     left:480px;
     top:0px;
@@ -1457,48 +840,11 @@ div {
     
 }
 
-#pd0u82 {
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:581px;
-    height:26px;
-    
+.u51_line {
+    background-image: url('../实现和落空的比例_files/u51_line.png');
 }
 
-.u87 {
-    position:absolute;
-    left:0px;
-    top:4px;
-    width:90px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u88 {
-    position:absolute;
-    left:90px;
-    top:2px;
-    width:220px;
-    height:19px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u89_line {
-    background-image: url('../prohecy_files/u89_line.png');
-}
-
-.u89_line {
+.u51_line {
     position:absolute;
     left:0px;
     top:4px;
@@ -1506,40 +852,20 @@ div {
     height:3px;
 }
 
-.u89 {
+.u51 {
     position:absolute;
     left:10px;
-    top:140px;
+    top:230px;
     width:590px;
     height:10px;
     
 }
 
-.u90_normal {
-    background-image: url('../prohecy_files/u90_normal.png');
-}
-
-.u90_container {
+.u52 {
     position:absolute;
-    left:530px;
-    top:220px;
-    width:70px;
-    height:30px;
-}
-
-#u90_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:76px;
-    height:36px;
-}
-
-.u91 {
-    position:absolute;
-    left:2px;
-    top:7px;
-    width:66px;
+    left:93px;
+    top:152px;
+    width:185px;
     height:16px;
     ;
     ;
@@ -1547,5 +873,464 @@ div {
     font-family:Arial;
     text-align:left;
     word-wrap:break-word;
+}
+
+.u53 {
+    position:absolute;
+    left:10px;
+    top:143px;
+    width:78px;
+    height:33px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54 {
+    position:absolute;
+    left:250px;
+    top:152px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u55 {
+    position:absolute;
+    left:93px;
+    top:195px;
+    width:185px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u56 {
+    position:absolute;
+    left:10px;
+    top:186px;
+    width:78px;
+    height:33px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u57 {
+    position:absolute;
+    left:250px;
+    top:195px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u58_normal {
+    background-image: url('../实现和落空的比例_files/u58_normal.png');
+}
+
+.u58_container {
+    position:absolute;
+    left:465px;
+    top:146px;
+    width:125px;
+    height:67px;
+}
+
+#u58_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:131px;
+    height:73px;
+}
+
+.u59 {
+    position:absolute;
+    left:2px;
+    top:17px;
+    width:121px;
+    height:33px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u60 {
+    position:absolute;
+    left:20px;
+    top:443px;
+    width:270px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u61 {
+    position:absolute;
+    left:340px;
+    top:443px;
+    width:120px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u62_normal {
+    background-image: url('../实现和落空的比例_files/u25_normal.png');
+}
+
+.u62_container {
+    position:absolute;
+    left:350px;
+    top:490px;
+    width:20px;
+    height:20px;
+}
+
+#u62_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u63 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u64_normal {
+    background-image: url('../实现和落空的比例_files/u31_normal.png');
+}
+
+.u64_container {
+    position:absolute;
+    left:380px;
+    top:490px;
+    width:40px;
+    height:20px;
+}
+
+#u64_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:26px;
+}
+
+.u65 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:36px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66_normal {
+    background-image: url('../实现和落空的比例_files/u25_normal.png');
+}
+
+.u66_container {
+    position:absolute;
+    left:350px;
+    top:520px;
+    width:20px;
+    height:20px;
+}
+
+#u66_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u67 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u68_normal {
+    background-image: url('../实现和落空的比例_files/u31_normal.png');
+}
+
+.u68_container {
+    position:absolute;
+    left:380px;
+    top:520px;
+    width:40px;
+    height:20px;
+}
+
+#u68_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:26px;
+}
+
+.u69 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:36px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u70_normal {
+    background-image: url('../实现和落空的比例_files/u25_normal.png');
+}
+
+.u70_container {
+    position:absolute;
+    left:350px;
+    top:550px;
+    width:20px;
+    height:20px;
+}
+
+#u70_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u71 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72_normal {
+    background-image: url('../实现和落空的比例_files/u31_normal.png');
+}
+
+.u72_container {
+    position:absolute;
+    left:380px;
+    top:550px;
+    width:40px;
+    height:20px;
+}
+
+#u72_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:26px;
+}
+
+.u73 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:36px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u74_normal {
+    background-image: url('../实现和落空的比例_files/u37_normal.png');
+}
+
+.u74_container {
+    position:absolute;
+    left:360px;
+    top:600px;
+    width:10px;
+    height:10px;
+}
+
+#u74_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u75 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u76_normal {
+    background-image: url('../实现和落空的比例_files/u37_normal.png');
+}
+
+.u76_container {
+    position:absolute;
+    left:380px;
+    top:600px;
+    width:10px;
+    height:10px;
+}
+
+#u76_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u77 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78_normal {
+    background-image: url('../实现和落空的比例_files/u37_normal.png');
+}
+
+.u78_container {
+    position:absolute;
+    left:400px;
+    top:600px;
+    width:10px;
+    height:10px;
+}
+
+#u78_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u79 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u80_line {
+    background-image: url('../实现和落空的比例_files/u80_line.png');
+}
+
+.u80_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:200px;
+}
+
+.u80 {
+    position:absolute;
+    left:340px;
+    top:480px;
+    width:10px;
+    height:200px;
+    
 }
 

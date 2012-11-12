@@ -188,3 +188,13 @@
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="prohecy_files/u81_line.png");
 }
 
+* html .u89_line {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="prohecy_files/u89_line.png");
+}
+
+* html .u90_normal {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="prohecy_files/u90_normal.png");
+}
+
