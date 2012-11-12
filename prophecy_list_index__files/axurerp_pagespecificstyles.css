@@ -37,7 +37,7 @@ div {
 .u0 {
     position:absolute;
     left:10px;
-    top:70px;
+    top:120px;
     width:10px;
     height:130px;
     
@@ -50,7 +50,7 @@ div {
 .u1_container {
     position:absolute;
     left:10px;
-    top:100px;
+    top:150px;
     width:10px;
     height:10px;
 }
@@ -84,7 +84,7 @@ div {
 .u3_container {
     position:absolute;
     left:30px;
-    top:80px;
+    top:130px;
     width:20px;
     height:20px;
 }
@@ -118,7 +118,7 @@ div {
 .u5_container {
     position:absolute;
     left:60px;
-    top:80px;
+    top:130px;
     width:50px;
     height:20px;
 }
@@ -148,7 +148,7 @@ div {
 .u7 {
     position:absolute;
     left:120px;
-    top:80px;
+    top:130px;
     width:350px;
     height:16px;
     ;
@@ -174,7 +174,7 @@ div {
 .u8 {
     position:absolute;
     left:30px;
-    top:100px;
+    top:150px;
     width:590px;
     height:10px;
     
@@ -183,7 +183,7 @@ div {
 .u9 {
     position:absolute;
     left:470px;
-    top:80px;
+    top:130px;
     width:150px;
     height:16px;
     ;
@@ -201,7 +201,7 @@ div {
 .u11_container {
     position:absolute;
     left:30px;
-    top:110px;
+    top:160px;
     width:190px;
     height:30px;
 }
@@ -235,7 +235,7 @@ div {
 .u13_container {
     position:absolute;
     left:230px;
-    top:110px;
+    top:160px;
     width:190px;
     height:30px;
 }
@@ -269,7 +269,7 @@ div {
 .u15_container {
     position:absolute;
     left:430px;
-    top:110px;
+    top:160px;
     width:190px;
     height:30px;
 }
@@ -299,7 +299,7 @@ div {
 .u17 {
     position:absolute;
     left:320px;
-    top:158px;
+    top:208px;
     width:70px;
     height:16px;
     ;
@@ -313,7 +313,7 @@ div {
 .u18 {
     position:absolute;
     left:120px;
-    top:158px;
+    top:208px;
     width:80px;
     height:16px;
     ;
@@ -327,7 +327,7 @@ div {
 .u19 {
     position:absolute;
     left:500px;
-    top:158px;
+    top:208px;
     width:120px;
     height:16px;
     ;
@@ -341,7 +341,7 @@ div {
 .u20 {
     position:absolute;
     left:30px;
-    top:150px;
+    top:200px;
     width:140px;
     height:33px;
     ;
@@ -355,7 +355,7 @@ div {
 .u21 {
     position:absolute;
     left:230px;
-    top:150px;
+    top:200px;
     width:130px;
     height:33px;
     ;
@@ -369,7 +369,7 @@ div {
 .u22 {
     position:absolute;
     left:430px;
-    top:150px;
+    top:200px;
     width:130px;
     height:33px;
     ;
@@ -415,7 +415,7 @@ div {
 }
 
 .u27_line {
-    background-image: url('../item_files/u0_line.png');
+    background-image: url('../prophecy_list_index__files/u27_line.png');
 }
 
 .u27_line {
@@ -423,26 +423,26 @@ div {
     left:4px;
     top:0px;
     width:3px;
-    height:130px;
+    height:83px;
 }
 
 .u27 {
     position:absolute;
     left:10px;
-    top:197px;
+    top:247px;
     width:10px;
-    height:130px;
+    height:83px;
     
 }
 
 .u28_normal {
-    background-image: url('../item_files/u1_normal.png');
+    background-image: url('../prophecy_list_index__files/u28_normal.png');
 }
 
 .u28_container {
     position:absolute;
     left:10px;
-    top:227px;
+    top:277px;
     width:10px;
     height:10px;
 }
@@ -470,13 +470,13 @@ div {
 }
 
 .u30_normal {
-    background-image: url('../item_summary_files/u3_normal.png');
+    background-image: url('../prophecy_list_index__files/u30_normal.png');
 }
 
 .u30_container {
     position:absolute;
     left:30px;
-    top:207px;
+    top:257px;
     width:20px;
     height:20px;
 }
@@ -504,13 +504,13 @@ div {
 }
 
 .u32_normal {
-    background-image: url('../item_summary_files/u5_normal.png');
+    background-image: url('../prophecy_list_index__files/u32_normal.png');
 }
 
 .u32_container {
     position:absolute;
     left:60px;
-    top:207px;
+    top:257px;
     width:50px;
     height:20px;
 }
@@ -540,7 +540,7 @@ div {
 .u34 {
     position:absolute;
     left:120px;
-    top:207px;
+    top:257px;
     width:350px;
     height:16px;
     ;
@@ -552,7 +552,7 @@ div {
 }
 
 .u35_line {
-    background-image: url('../item_summary_files/u8_line.png');
+    background-image: url('../prophecy_list_index__files/u35_line.png');
 }
 
 .u35_line {
@@ -566,7 +566,7 @@ div {
 .u35 {
     position:absolute;
     left:30px;
-    top:227px;
+    top:277px;
     width:590px;
     height:10px;
     
@@ -575,7 +575,7 @@ div {
 .u36 {
     position:absolute;
     left:470px;
-    top:207px;
+    top:257px;
     width:150px;
     height:16px;
     ;
@@ -586,31 +586,31 @@ div {
     word-wrap:break-word;
 }
 
-.u38_normal {
-    background-image: url('../item_files/u11_normal.png');
+.u37_normal {
+    background-image: url('../prophecy_list_index__files/u37_normal.png');
 }
 
-.u38_container {
+.u37_container {
     position:absolute;
-    left:30px;
-    top:237px;
-    width:190px;
+    left:530px;
+    top:287px;
+    width:90px;
     height:30px;
 }
 
-#u38_img {
+#u37_img {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:196px;
+    width:96px;
     height:36px;
 }
 
-.u39 {
+.u38 {
     position:absolute;
     left:2px;
     top:7px;
-    width:186px;
+    width:86px;
     height:16px;
     ;
     ;
@@ -620,31 +620,52 @@ div {
     word-wrap:break-word;
 }
 
+.u39_line {
+    background-image: url('../item_files/u0_line.png');
+}
+
+.u39_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:130px;
+}
+
+.u39 {
+    position:absolute;
+    left:10px;
+    top:330px;
+    width:10px;
+    height:130px;
+    
+}
+
 .u40_normal {
-    background-image: url('../item_files/u11_normal.png');
+    background-image: url('../item_files/u1_normal.png');
 }
 
 .u40_container {
     position:absolute;
-    left:230px;
-    top:237px;
-    width:190px;
-    height:30px;
+    left:10px;
+    top:360px;
+    width:10px;
+    height:10px;
 }
 
 #u40_img {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:196px;
-    height:36px;
+    width:16px;
+    height:16px;
 }
 
 .u41 {
     position:absolute;
     left:2px;
-    top:7px;
-    width:186px;
+    top:-3px;
+    width:6px;
     height:16px;
     ;
     ;
@@ -655,30 +676,30 @@ div {
 }
 
 .u42_normal {
-    background-image: url('../item_files/u11_normal.png');
+    background-image: url('../item_summary_files/u3_normal.png');
 }
 
 .u42_container {
     position:absolute;
-    left:430px;
-    top:237px;
-    width:190px;
-    height:30px;
+    left:30px;
+    top:340px;
+    width:20px;
+    height:20px;
 }
 
 #u42_img {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:196px;
-    height:36px;
+    width:26px;
+    height:26px;
 }
 
 .u43 {
     position:absolute;
     left:2px;
-    top:7px;
-    width:186px;
+    top:2px;
+    width:16px;
     height:16px;
     ;
     ;
@@ -688,25 +709,31 @@ div {
     word-wrap:break-word;
 }
 
-.u44 {
+.u44_normal {
+    background-image: url('../item_summary_files/u5_normal.png');
+}
+
+.u44_container {
     position:absolute;
-    left:320px;
-    top:285px;
-    width:70px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
+    left:60px;
+    top:340px;
+    width:50px;
+    height:20px;
+}
+
+#u44_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:56px;
+    height:26px;
 }
 
 .u45 {
     position:absolute;
-    left:120px;
-    top:285px;
-    width:80px;
+    left:2px;
+    top:2px;
+    width:46px;
     height:16px;
     ;
     ;
@@ -718,9 +745,9 @@ div {
 
 .u46 {
     position:absolute;
-    left:500px;
-    top:285px;
-    width:120px;
+    left:120px;
+    top:340px;
+    width:350px;
     height:16px;
     ;
     ;
@@ -730,26 +757,33 @@ div {
     word-wrap:break-word;
 }
 
+.u47_line {
+    background-image: url('../item_summary_files/u8_line.png');
+}
+
+.u47_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:590px;
+    height:3px;
+}
+
 .u47 {
     position:absolute;
     left:30px;
-    top:277px;
-    width:140px;
-    height:33px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
+    top:360px;
+    width:590px;
+    height:10px;
+    
 }
 
 .u48 {
     position:absolute;
-    left:230px;
-    top:277px;
-    width:130px;
-    height:33px;
+    left:470px;
+    top:340px;
+    width:150px;
+    height:16px;
     ;
     ;
     ;
@@ -758,66 +792,65 @@ div {
     word-wrap:break-word;
 }
 
-.u49 {
-    position:absolute;
-    left:430px;
-    top:277px;
-    width:130px;
-    height:33px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
+.u50_normal {
+    background-image: url('../item_files/u11_normal.png');
 }
 
-.u51_line {
-    background-image: url('../item_files/u0_line.png');
+.u50_container {
+    position:absolute;
+    left:30px;
+    top:370px;
+    width:190px;
+    height:30px;
 }
 
-.u51_line {
+#u50_img {
     position:absolute;
-    left:4px;
-    top:0px;
-    width:3px;
-    height:130px;
+    left:-3px;
+    top:-3px;
+    width:196px;
+    height:36px;
 }
 
 .u51 {
     position:absolute;
-    left:10px;
-    top:330px;
-    width:10px;
-    height:130px;
-    
+    left:2px;
+    top:7px;
+    width:186px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
 }
 
 .u52_normal {
-    background-image: url('../item_files/u1_normal.png');
+    background-image: url('../item_files/u11_normal.png');
 }
 
 .u52_container {
     position:absolute;
-    left:10px;
-    top:360px;
-    width:10px;
-    height:10px;
+    left:230px;
+    top:370px;
+    width:190px;
+    height:30px;
 }
 
 #u52_img {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:16px;
-    height:16px;
+    width:196px;
+    height:36px;
 }
 
 .u53 {
     position:absolute;
     left:2px;
-    top:-3px;
-    width:6px;
+    top:7px;
+    width:186px;
     height:16px;
     ;
     ;
@@ -828,30 +861,30 @@ div {
 }
 
 .u54_normal {
-    background-image: url('../item_summary_files/u3_normal.png');
+    background-image: url('../item_files/u11_normal.png');
 }
 
 .u54_container {
     position:absolute;
-    left:30px;
-    top:340px;
-    width:20px;
-    height:20px;
+    left:430px;
+    top:370px;
+    width:190px;
+    height:30px;
 }
 
 #u54_img {
     position:absolute;
     left:-3px;
     top:-3px;
-    width:26px;
-    height:26px;
+    width:196px;
+    height:36px;
 }
 
 .u55 {
     position:absolute;
     left:2px;
-    top:2px;
-    width:16px;
+    top:7px;
+    width:186px;
     height:16px;
     ;
     ;
@@ -861,31 +894,25 @@ div {
     word-wrap:break-word;
 }
 
-.u56_normal {
-    background-image: url('../item_summary_files/u5_normal.png');
-}
-
-.u56_container {
+.u56 {
     position:absolute;
-    left:60px;
-    top:340px;
-    width:50px;
-    height:20px;
-}
-
-#u56_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:56px;
-    height:26px;
+    left:320px;
+    top:418px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
 }
 
 .u57 {
     position:absolute;
-    left:2px;
-    top:2px;
-    width:46px;
+    left:120px;
+    top:418px;
+    width:80px;
     height:16px;
     ;
     ;
@@ -897,185 +924,6 @@ div {
 
 .u58 {
     position:absolute;
-    left:120px;
-    top:340px;
-    width:350px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u59_line {
-    background-image: url('../item_summary_files/u8_line.png');
-}
-
-.u59_line {
-    position:absolute;
-    left:0px;
-    top:4px;
-    width:590px;
-    height:3px;
-}
-
-.u59 {
-    position:absolute;
-    left:30px;
-    top:360px;
-    width:590px;
-    height:10px;
-    
-}
-
-.u60 {
-    position:absolute;
-    left:470px;
-    top:340px;
-    width:150px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u62_normal {
-    background-image: url('../item_files/u11_normal.png');
-}
-
-.u62_container {
-    position:absolute;
-    left:30px;
-    top:370px;
-    width:190px;
-    height:30px;
-}
-
-#u62_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:196px;
-    height:36px;
-}
-
-.u63 {
-    position:absolute;
-    left:2px;
-    top:7px;
-    width:186px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u64_normal {
-    background-image: url('../item_files/u11_normal.png');
-}
-
-.u64_container {
-    position:absolute;
-    left:230px;
-    top:370px;
-    width:190px;
-    height:30px;
-}
-
-#u64_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:196px;
-    height:36px;
-}
-
-.u65 {
-    position:absolute;
-    left:2px;
-    top:7px;
-    width:186px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u66_normal {
-    background-image: url('../item_files/u11_normal.png');
-}
-
-.u66_container {
-    position:absolute;
-    left:430px;
-    top:370px;
-    width:190px;
-    height:30px;
-}
-
-#u66_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:196px;
-    height:36px;
-}
-
-.u67 {
-    position:absolute;
-    left:2px;
-    top:7px;
-    width:186px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u68 {
-    position:absolute;
-    left:320px;
-    top:418px;
-    width:70px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u69 {
-    position:absolute;
-    left:120px;
-    top:418px;
-    width:80px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u70 {
-    position:absolute;
     left:500px;
     top:418px;
     width:120px;
@@ -1088,7 +936,7 @@ div {
     word-wrap:break-word;
 }
 
-.u71 {
+.u59 {
     position:absolute;
     left:30px;
     top:410px;
@@ -1102,7 +950,7 @@ div {
     word-wrap:break-word;
 }
 
-.u72 {
+.u60 {
     position:absolute;
     left:230px;
     top:410px;
@@ -1116,7 +964,7 @@ div {
     word-wrap:break-word;
 }
 
-.u73 {
+.u61 {
     position:absolute;
     left:430px;
     top:410px;
@@ -1130,11 +978,11 @@ div {
     word-wrap:break-word;
 }
 
-.u75_line {
+.u63_line {
     background-image: url('../item_files/u0_line.png');
 }
 
-.u75_line {
+.u63_line {
     position:absolute;
     left:4px;
     top:0px;
@@ -1142,7 +990,7 @@ div {
     height:130px;
 }
 
-.u75 {
+.u63 {
     position:absolute;
     left:10px;
     top:463px;
@@ -1151,11 +999,11 @@ div {
     
 }
 
-.u76_normal {
+.u64_normal {
     background-image: url('../item_files/u1_normal.png');
 }
 
-.u76_container {
+.u64_container {
     position:absolute;
     left:10px;
     top:493px;
@@ -1163,7 +1011,7 @@ div {
     height:10px;
 }
 
-#u76_img {
+#u64_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1171,7 +1019,7 @@ div {
     height:16px;
 }
 
-.u77 {
+.u65 {
     position:absolute;
     left:2px;
     top:-3px;
@@ -1185,11 +1033,11 @@ div {
     word-wrap:break-word;
 }
 
-.u78_normal {
+.u66_normal {
     background-image: url('../item_summary_files/u3_normal.png');
 }
 
-.u78_container {
+.u66_container {
     position:absolute;
     left:30px;
     top:473px;
@@ -1197,7 +1045,7 @@ div {
     height:20px;
 }
 
-#u78_img {
+#u66_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1205,7 +1053,7 @@ div {
     height:26px;
 }
 
-.u79 {
+.u67 {
     position:absolute;
     left:2px;
     top:2px;
@@ -1219,11 +1067,11 @@ div {
     word-wrap:break-word;
 }
 
-.u80_normal {
+.u68_normal {
     background-image: url('../item_summary_files/u5_normal.png');
 }
 
-.u80_container {
+.u68_container {
     position:absolute;
     left:60px;
     top:473px;
@@ -1231,7 +1079,7 @@ div {
     height:20px;
 }
 
-#u80_img {
+#u68_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1239,7 +1087,7 @@ div {
     height:26px;
 }
 
-.u81 {
+.u69 {
     position:absolute;
     left:2px;
     top:2px;
@@ -1253,7 +1101,7 @@ div {
     word-wrap:break-word;
 }
 
-.u82 {
+.u70 {
     position:absolute;
     left:120px;
     top:473px;
@@ -1267,11 +1115,11 @@ div {
     word-wrap:break-word;
 }
 
-.u83_line {
+.u71_line {
     background-image: url('../item_summary_files/u8_line.png');
 }
 
-.u83_line {
+.u71_line {
     position:absolute;
     left:0px;
     top:4px;
@@ -1279,7 +1127,7 @@ div {
     height:3px;
 }
 
-.u83 {
+.u71 {
     position:absolute;
     left:30px;
     top:493px;
@@ -1288,7 +1136,7 @@ div {
     
 }
 
-.u84 {
+.u72 {
     position:absolute;
     left:470px;
     top:473px;
@@ -1302,11 +1150,11 @@ div {
     word-wrap:break-word;
 }
 
-.u86_normal {
+.u74_normal {
     background-image: url('../item_files/u11_normal.png');
 }
 
-.u86_container {
+.u74_container {
     position:absolute;
     left:30px;
     top:503px;
@@ -1314,7 +1162,7 @@ div {
     height:30px;
 }
 
-#u86_img {
+#u74_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1322,7 +1170,7 @@ div {
     height:36px;
 }
 
-.u87 {
+.u75 {
     position:absolute;
     left:2px;
     top:7px;
@@ -1336,11 +1184,11 @@ div {
     word-wrap:break-word;
 }
 
-.u88_normal {
+.u76_normal {
     background-image: url('../item_files/u11_normal.png');
 }
 
-.u88_container {
+.u76_container {
     position:absolute;
     left:230px;
     top:503px;
@@ -1348,7 +1196,7 @@ div {
     height:30px;
 }
 
-#u88_img {
+#u76_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1356,7 +1204,7 @@ div {
     height:36px;
 }
 
-.u89 {
+.u77 {
     position:absolute;
     left:2px;
     top:7px;
@@ -1370,11 +1218,11 @@ div {
     word-wrap:break-word;
 }
 
-.u90_normal {
+.u78_normal {
     background-image: url('../item_files/u11_normal.png');
 }
 
-.u90_container {
+.u78_container {
     position:absolute;
     left:430px;
     top:503px;
@@ -1382,7 +1230,7 @@ div {
     height:30px;
 }
 
-#u90_img {
+#u78_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1390,7 +1238,7 @@ div {
     height:36px;
 }
 
-.u91 {
+.u79 {
     position:absolute;
     left:2px;
     top:7px;
@@ -1404,7 +1252,7 @@ div {
     word-wrap:break-word;
 }
 
-.u92 {
+.u80 {
     position:absolute;
     left:320px;
     top:551px;
@@ -1418,7 +1266,7 @@ div {
     word-wrap:break-word;
 }
 
-.u93 {
+.u81 {
     position:absolute;
     left:120px;
     top:551px;
@@ -1432,7 +1280,7 @@ div {
     word-wrap:break-word;
 }
 
-.u94 {
+.u82 {
     position:absolute;
     left:500px;
     top:551px;
@@ -1446,7 +1294,7 @@ div {
     word-wrap:break-word;
 }
 
-.u95 {
+.u83 {
     position:absolute;
     left:30px;
     top:543px;
@@ -1460,7 +1308,7 @@ div {
     word-wrap:break-word;
 }
 
-.u96 {
+.u84 {
     position:absolute;
     left:230px;
     top:543px;
@@ -1474,7 +1322,7 @@ div {
     word-wrap:break-word;
 }
 
-.u97 {
+.u85 {
     position:absolute;
     left:430px;
     top:543px;
@@ -1488,11 +1336,11 @@ div {
     word-wrap:break-word;
 }
 
-.u99_line {
-    background-image: url('../paging_files/u99_line.png');
+.u87_line {
+    background-image: url('../paging_files/u87_line.png');
 }
 
-.u99_line {
+.u87_line {
     position:absolute;
     left:0px;
     top:4px;
@@ -1500,7 +1348,7 @@ div {
     height:3px;
 }
 
-.u99 {
+.u87 {
     position:absolute;
     left:10px;
     top:594px;
@@ -1509,7 +1357,7 @@ div {
     
 }
 
-.u100 {
+.u88 {
     position:absolute;
     left:470px;
     top:604px;
@@ -1521,5 +1369,210 @@ div {
     font-family:Arial;
     text-align:left;
     word-wrap:break-word;
+}
+
+.u90 {
+    position:absolute;
+    left:30px;
+    top:294px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u91_normal {
+    background-image: url('../prophecy_list_index__files/u91_normal.png');
+}
+
+.u91_container {
+    position:absolute;
+    left:20px;
+    top:80px;
+    width:110px;
+    height:30px;
+}
+
+#u91_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:36px;
+}
+
+.u92 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u93_normal {
+    background-image: url('../prophecy_list_index__files/u93_normal.png');
+}
+
+.u93_container {
+    position:absolute;
+    left:140px;
+    top:80px;
+    width:110px;
+    height:30px;
+}
+
+#u93_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:36px;
+}
+
+.u94 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u95_normal {
+    background-image: url('../prophecy_list_index__files/u93_normal.png');
+}
+
+.u95_container {
+    position:absolute;
+    left:380px;
+    top:80px;
+    width:110px;
+    height:30px;
+}
+
+#u95_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:36px;
+}
+
+.u96 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u97_normal {
+    background-image: url('../prophecy_list_index__files/u93_normal.png');
+}
+
+.u97_container {
+    position:absolute;
+    left:500px;
+    top:80px;
+    width:110px;
+    height:30px;
+}
+
+#u97_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:36px;
+}
+
+.u98 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u99_normal {
+    background-image: url('../prophecy_list_index__files/u93_normal.png');
+}
+
+.u99_container {
+    position:absolute;
+    left:260px;
+    top:80px;
+    width:110px;
+    height:30px;
+}
+
+#u99_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:36px;
+}
+
+.u100 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u101_line {
+    background-image: url('../prophecy_list_index__files/u101_line.png');
+}
+
+.u101_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:610px;
+    height:3px;
+}
+
+.u101 {
+    position:absolute;
+    left:10px;
+    top:105px;
+    width:610px;
+    height:10px;
+    
 }
 
