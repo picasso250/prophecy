@@ -1,4 +1,8 @@
 <?php
+
+define('ROOT', __DIR__);
+define('ENV_MODE', isset($_ENV['USER']) && $_ENV['USER'] === 'bae' ? 'production' : 'development');
+
 require 'vendor/autoload.php';
 
 $config_root = __DIR__.'/config';
@@ -11,7 +15,22 @@ $config = array_merge(
 );
 $app = new \Slim\Slim($config);
 
-$app->get('/hello/:name', function ($name) {
+$app->get('/', function () {
+    echo "Hello, $name";
+});
+$app->get('/predict/:id', function ($id) {
+    echo "predict, $id";
+});
+$app->get('/predict/create', function () {
+    echo "Hello, $name";
+});
+$app->post('/predict/create', function () {
+    echo "Hello, $name";
+});
+$app->get('/login', function () {
+    echo "Hello, $name";
+});
+$app->post('/login', function () {
     echo "Hello, $name";
 });
 

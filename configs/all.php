@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'templates.path' => '../templates',
+    'templates.path' => ROOT.'/templates',
+    'mode' => ENV_MODE,
 ];
