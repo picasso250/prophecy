@@ -3,6 +3,6 @@
 
 <ul>
   <?php foreach ($attitude_list as $attitude): ?>
-    <li><?= $attitude['name'] ?> <?= $attitude['is_defend'] ?></li>
+    <li><?= htmlspecialchars($attitude['name']) ?> <?= $attitude['is_defend'] ?></li>
   }
 </ul>

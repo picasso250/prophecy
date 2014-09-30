@@ -1,9 +1,12 @@
 <form method="post">
+  <?php if (isset($flash['message'])): ?>
+    <div><?= $flash['message']) ?></div>
+  <?php endif ?>
   <div>
-    <input type="text" name="username" value="<?= isset($flash['username']) ? htmlspecialchars($flash['username']) : '' ?>">
+    <input type="text" name="username" value="<?= $this->getFlashValue('username') ?>">
   </div>
   <div>
-    <input type="text" name="password" value="<?= isset($flash['password']) ? htmlspecialchars($flash['password']) : '' ?>">
+    <input type="text" name="password" value="<?= $this->getFlashValue('password') ?>">
   </div>
   <div>
     <input type="submit">

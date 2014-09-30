@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><?= $title ?></title>
+  <title><?= $this->get('title') ?: 'predict' ?></title>
 </head>
 <body>
 <header>
   <h1>predict</h1>
+  <?php if(get_user_id()): ?>
+    <?= $current_user['name'] ?>
+    <a href="/logout">logout</a>
+  <?php else: ?>
+    <a href="/login">login</a>
+  <?php endif; ?>
 </header>
 <?php include $_inner_view; ?>
 </body>

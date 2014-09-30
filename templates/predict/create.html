@@ -1,0 +1,17 @@
+<form>
+	<?php if (isset($flash['message'])): ?>
+		<div><?= $flash['message']) ?></div>
+	<?php endif ?>
+	<div>
+    <input type="text" name="title" value="<?= $this->getFlashValue('title') ?>">
+  </div>
+	<div>
+		<textarea name="descript"><?= $this->getFlashValue('descript') ?></textarea>
+  </div>
+  <div>
+  	<input type="text" name="valid_date" value="<?= $this->getFlashValue('valid_date') ?>">
+  </div>
+  <div>
+  	<input type="submit">
+  </div>
+</form>

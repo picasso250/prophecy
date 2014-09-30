@@ -2,7 +2,7 @@
 
 namespace core;
 
-class View extends \Slim\View;
+class View extends \Slim\View
 {
 	public function render($template, $data = null)
 	{
@@ -13,5 +13,14 @@ class View extends \Slim\View;
 			$data = ['_inner_view' => $_inner_view];
 		}
 		return parent::render('master.html', $data);
+	}
+
+	public function getFlashValue($name)
+	{
+		if ($flash = $this->get('flash')) {
+			return isset($flash[$name]) ? htmlspecialchars($flash[$name]) : '';
+		} else {
+			return '';
+		}
 	}
 }

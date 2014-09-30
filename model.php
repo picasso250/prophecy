@@ -5,9 +5,18 @@ function exec_sql($sql, $values = array())
     global $db;
     $stmt = $db->prepare($sql);
     if (!$stmt->execute($values)) {
-        $throw new Exception("db error", 1, $db->errorInfo());
+        throw new Exception("db error", 1, $db->errorInfo());
     }
     return $stmt;
+}
+
+function insert($table, $values)
+{
+    $keys = array_keys($values);
+    $keystr = implode(',', array_map(function($e){return "`$e`";}, $keys));
+    $keystr = implode(',', array_map(function($e){return ":$e";}, $keys));
+    $sql = 'INSERT INTO `$table` ($keystr) VALUES ($place_holder)';
+    return exec_sql($sql, $values);
 }
 
 function get_predict_list()
@@ -19,7 +28,7 @@ function get_predict_list()
 function get_predict($id)
 {
     $stmt = exec_sql('SELECT * FROM predict WHERE id=? limit 1', [$id]);
-    return $stmt->fetchRow(Pdo::FETCH_ASSOC);
+    return $stmt->fetch(Pdo::FETCH_ASSOC);
 }
 
 function get_user_id()
@@ -40,8 +49,8 @@ function create_predict($request)
 
 function get_user_by_name($username, $password)
 {
-    $stmt = exec_sql('SELECT * FROM user WHERE name=? limit 1', [$username, sha1($password)]);
-    $user = $stmt->fetchRow(Pdo::FETCH_ASSOC);
+    $stmt = exec_sql('SELECT * FROM user WHERE name=? limit 1', [$username]);
+    $user = $stmt->fetch(Pdo::FETCH_ASSOC);
     list($salt, $encrypt) = explode(':', $user['password']);
     if (sha1($salt.$password) === $encrypt) {
         return $user;
