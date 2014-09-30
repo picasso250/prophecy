@@ -75,4 +75,9 @@ $login_func = function () use ($app) {
 $app->get('/login', $login_func);
 $app->post('/login', $login_func);
 
+$app->error(function (\Exception $e) use ($app) {
+    $app->log->error('{$e->getCode()} {$e->getMessage()}');
+    $app->render('error');
+});
+
 $app->run();
