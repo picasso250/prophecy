@@ -1,0 +1,8 @@
+<h1><?= htmlspecialchars($predict['title']) ?></h1>
+<p><?= htmlspecialchars($predict['descript']) ?></p>
+
+<ul>
+  <?php foreach ($attitude_list as $attitude): ?>
+    <li><?= $attitude['name'] ?> <?= $attitude['is_defend'] ?></li>
+  }
+</ul>

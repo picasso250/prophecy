@@ -5,79 +5,86 @@ define('ENV_MODE', isset($_ENV['USER']) && $_ENV['USER'] === 'bae' ? 'production
 
 require 'vendor/autoload.php';
 
+spl_autoload_register(function ($class) {
+    if (strpos($class, '/core/') === 0) {
+        require __DIR__."$class.php";
+    }
+});
+
+require __DIR__.'/model.php';
+
 $config_root = __DIR__.'/config';
 if (!is_dir($config_root)) {
     throw new Exception("no dir ".$config_root, 1);
 }
-$config = 
-    require "$config_root/main.php",
+$config = require "$config_root/main.php";
 $app = new \Slim\Slim($config);
+$app->config('mode', ENV_MODE);
+$app->config(require $config_root.'/'.ENV_MODE.'.php');
 
-// Only invoked if mode is "production"
-$app->configureMode('production', function () use ($app) {
-    $app->config([
-        'debug' => false,
-        'log.writer' => new \Slim\LogWriter('/home/bae/log'),
-        'log.level' => \Slim\Log::WARN
-    ]);
-});
+$db = new \Pdo($app->config('db.dsn'), $app->config('db.username'), $app->config('db.password'), $app->config('db.driver_options'));
+require __DIR__.'/model.php';
 
-// Only invoked if mode is "development"
-$app->configureMode('development', function () use ($app) {
-    $app->config([
-        'debug' => true,
-        'log.writer' => new \Slim\LogWriter(ROOT.'/app.log'),
-        'log.level' => \Slim\Log::DEBUG
-    ]);
-});
+session_cache_limiter(false);
+session_start();
 
 $app->get('/', function () {
-    echo "Hello, $name";
+    $predict_list = get_predict_list();
+    $app->render('index', compact('predict_list'));
 });
 
 $app->group('/api', function () use ($app) {
     $app->get('/:id', function ($id) {
         $predict = get_predict($id);
-        $app->render('predict/show', compact('predict'));
+        $attitude_list = get_attitude_list($id);
+        $app->render('predict/show', compact('predict', 'attitude_list'));
     })->conditions(array('id' => '\d+'));
 
-    $create_func = function () use ($app) {
-        $err_msg = false;
+    $app->get('/create', function () use ($app) {
+        $app->render('predict/create');
+    });
+    $app->post('/create', function () use ($app) {
         $request = $app->request;
-        if ($request->isPost()) {
-            list($id, $err_msg) = create_predict($request);
-            if ($id) {
-                $app->redirect('/predict/'.$id)
-            }
+        list($id, $err_msg) = create_predict($request);
+        if ($id) {
+            $app->redirect('/predict/'.$id);
+        } else {
+            $app->flash('err_msg', $err_msg);
+            $app->redirect('/predict/create');
         }
-        $app->render('predict/create', compact('err_msg'));
-    };
-    $app->get('/create', $create_func);
-    $app->post('/create', $create_func);
+    });
 });
 
-$login_func = function () use ($app) {
-    $username = '';
-    $password = '';
-    $msg = '';
-    $request = $app->request;
-    if ($request->isPost()) {
-        $username = $request->post('username');
-        $password = $request->post('password');
-        if (check_user_name($username, $password)) {
-            $app->redirect('/');
-        } else {
-            $msg = 'username or password not correct';
-        }
-    }
+$app->get('/login', function () use ($app) {
     $app->render('login', compact('username', 'password', 'msg'));
-};
-$app->get('/login', $login_func);
-$app->post('/login', $login_func);
+});
+$app->post('/login', function () use ($app) {
+    $request = $app->request;
+    $username = $request->post('username');
+    $password = $request->post('password');
+    if ($user = get_user_by_name($username, $password)) {
+        $_SESSION['user_id'] = $user['id'];
+        $app->redirect('/');
+    } else {
+        $app->flash('username', $username);
+        $app->flash('password', $password);
+        $app->flash('message', 'username or password not correct');
+        $app->redirect('/login');
+    }
+});
+
+$app->get('/login_out', function () use ($app) {
+    $_SESSION['user_id'] = 0;
+    $app->redirect('/');
+});
 
 $app->error(function (\Exception $e) use ($app) {
     $app->log->error('{$e->getCode()} {$e->getMessage()}');
     $app->render('error');
+});
+
+$app->notFound(function () use ($app) {
+    $app->render('404.html');
 });
 
 $app->run();

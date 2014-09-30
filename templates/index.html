@@ -1,0 +1,7 @@
+<ul>
+  <?php foreach($predict_list as $predict): ?>
+    <li>
+      <a href="/predict/<?= $predict['id'] ?>"><?= htmlspecialchars($predict['title']) ?></a>
+    </li>
+  <?php endforeach ?>
+</ul>

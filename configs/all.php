@@ -2,5 +2,5 @@
 
 return [
     'templates.path' => ROOT.'/templates',
-    'mode' => ENV_MODE,
+    'view' => new \core\View(),
 ];

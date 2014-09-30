@@ -1,0 +1,11 @@
+<form method="post">
+  <div>
+    <input type="text" name="username" value="<?= isset($flash['username']) ? htmlspecialchars($flash['username']) : '' ?>">
+  </div>
+  <div>
+    <input type="text" name="password" value="<?= isset($flash['password']) ? htmlspecialchars($flash['password']) : '' ?>">
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
