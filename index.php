@@ -65,15 +65,21 @@ $app->post('/login', function () use ($app) {
     $request = $app->request;
     $username = $request->post('username');
     $password = $request->post('password');
-    if ($user = get_user_by_name($username, $password)) {
+    if ($username && $password && $user = get_user_by_name($username, $password)) {
         $_SESSION['user_id'] = $user['id'];
         $app->redirect('/');
-    } else {
-        $app->flash('username', $username);
-        $app->flash('password', $password);
-        $app->flash('message', 'username or password not correct');
-        $app->redirect('/login');
     }
+    $message = 'username or password not correct';
+    if (empty($username)) {
+        $message = 'empty username';
+    }
+    if (empty($password)) {
+        $message = 'empty password';
+    }
+    $app->flash('username', $username);
+    $app->flash('password', $password);
+    $app->flash('message', $message);
+    $app->redirect('/login');
 });
 
 $app->get('/logout', function () use ($app) {
