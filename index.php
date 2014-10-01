@@ -58,16 +58,17 @@ $app->group('/predict', function () use ($app) {
     });
 
     $app->post('/:id/attitude', function ($id) use ($app) {
+        global $db;
         $request = $app->request;
         $is_defend = $request->post('is_defend');
         $points = $request->post('points');
-        $app->db->beginTransaction();
+        $db->beginTransaction();
         list($_, $err_msg) = create_attitude($id, $is_defend, $points);
         if ($err_msg) {
-            $app->db->rollback();
+            $db->rollback();
             echo json_encode(['code' => 1, 'message' => $err_msg]);
         } else {
-            $app->db->commit();
+            $db->commit();
             echo json_encode(['code' => 0, 'message' => 'ok']);
         }
     });

@@ -25,9 +25,15 @@ function get_predict_list()
 {
     $stmt = exec_sql('SELECT * FROM predict ORDER BY id desc limit 100');
     $predict_list = $stmt->fetchAll(Pdo::FETCH_ASSOC);
+    $user_id = get_user_id();
     foreach ($predict_list as &$predict) {
+        $predict_id = $predict['id'];
+        $stmt = exec_sql('SELECT is_defend FROM user_predict WHERE predict_id=? and user_id=?', [$predict_id, $user_id]);
+        $predict['my_attitude'] = $stmt->fetchColumn();
         $predict['bet_pts'] = 100;
-        $predict['defend'] = get_defend($predict['id']);
+        $defend = get_defend($predict_id);
+        $predict['defend'] = $defend;
+        $predict['total_points'] = $defend[0]['total'] + $defend[1]['total'];
     }
     return $predict_list;
 }
@@ -40,16 +46,6 @@ function get_defend($id)
     $ret = [$default, $default];
     foreach ($rows as $row) {
         $ret[$row['is_defend']] = $row;
-    }
-    $total = $ret[0]['total'] + $ret[1]['total'];
-    foreach ($ret as &$e) {
-        $count = $e['count'];
-        if ($count) {
-            $win_pts = intval($total / $count);
-        } else {
-            $win_pts = 0;
-        }
-        $e['win_pts'] = $win_pts;
     }
     return $ret;
 }
@@ -132,6 +128,15 @@ function create_attitude($predict_id, $is_defend, $points)
     if ($user['points'] < $points) {
         return [null, 'you have only $user[points] points, not enough'];
     }
+
+    exec_sql('UPDATE user SET points=points-?', [$points]);
+
+    $sql = 'SELECT user_id FROM user_predict WHERE predict_id=? and user_id=? LIMIT 1';
+    $stmt = exec_sql($sql, [$predict_id, $user_id]);
+    if ($stmt->fetchColumn()) {
+        return [null, 'you have showed your attitude'];
+    }
+    
     $id = insert('user_predict', [
         'user_id' => $user_id,
         'predict_id' => $predict_id,

@@ -28,7 +28,7 @@ $(function () {
             alert('points should greater than 0');
         };
         var data = {
-            id: id
+            id: id,
             points: points,
             is_defend: is_defend
         };
