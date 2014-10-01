@@ -5,6 +5,16 @@
   <?php foreach($predict_list as $predict): ?>
     <li>
       <a href="/predict/<?= $predict['id'] ?>"><?= htmlspecialchars($predict['title']) ?></a>
+      <div>
+        <span><?= $predict['defend'][1]['count'] ?> agree</span>
+        <input type="text" id="Points<?= $predict['id'] ?>" value="<?= $predict['bet_pts'] ?>">pts
+        <button class="bet-button"> data-id="<?= $predict['id'] ?>" data-defend="1">Place</button><?= $predict['bet_pts'] + $predict['defend'][1]['win_pts'] ?>s if wins
+      </div>
+      <div>
+        <span><?= $predict['defend'][0]['count'] ?> disagree</span>
+        <input type="text" id="Points<?= $predict['id'] ?>" value="<?= $predict['bet_pts'] ?>">pts
+        <button class="bet-button"> data-id="<?= $predict['id'] ?>" data-defend="0">Place</button><?= $predict['bet_pts'] + $predict['defend'][0]['win_pts'] ?>s if wins
+      </div>
     </li>
   <?php endforeach ?>
 </ul>

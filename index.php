@@ -56,6 +56,21 @@ $app->group('/predict', function () use ($app) {
             $app->redirect('/predict/create');
         }
     });
+
+    $app->post('/:id/attitude', function ($id) use ($app) {
+        $request = $app->request;
+        $is_defend = $request->post('is_defend');
+        $points = $request->post('points');
+        $app->db->beginTransaction();
+        list($_, $err_msg) = create_attitude($id, $is_defend, $points);
+        if ($err_msg) {
+            $app->db->rollback();
+            echo json_encode(['code' => 1, 'message' => $err_msg]);
+        } else {
+            $app->db->commit();
+            echo json_encode(['code' => 0, 'message' => 'ok']);
+        }
+    });
 });
 
 $app->get('/login', function () use ($app) {

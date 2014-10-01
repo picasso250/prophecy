@@ -24,13 +24,47 @@ function insert($table, $values)
 function get_predict_list()
 {
     $stmt = exec_sql('SELECT * FROM predict ORDER BY id desc limit 100');
-    return $stmt->fetchAll(Pdo::FETCH_ASSOC);
+    $predict_list = $stmt->fetchAll(Pdo::FETCH_ASSOC);
+    foreach ($predict_list as &$predict) {
+        $predict['bet_pts'] = 100;
+        $predict['defend'] = get_defend($predict['id']);
+    }
+    return $predict_list;
+}
+
+function get_defend($id)
+{
+    $stmt = exec_sql('SELECT is_defend, count(*) as `count`, sum(points) as `total` FROM user_predict GROUP BY is_defend ORDER BY is_defend ASC');
+    $rows = $stmt->fetchAll(Pdo::FETCH_ASSOC);
+    $default = ['count' => 0, 'total' => 0];
+    $ret = [$default, $default];
+    foreach ($rows as $row) {
+        $ret[$row['is_defend']] = $row;
+    }
+    $total = $ret[0]['total'] + $ret[1]['total'];
+    foreach ($ret as &$e) {
+        $count = $e['count'];
+        if ($count) {
+            $win_pts = intval($total / $count);
+        } else {
+            $win_pts = 0;
+        }
+        $e['win_pts'] = $win_pts;
+    }
+    return $ret;
 }
 
 function get_predict($id)
 {
+    global $app;
     $stmt = exec_sql('SELECT p.*, u.name FROM predict AS p JOIN user AS u ON p.creator=u.id WHERE p.id=? limit 1', [$id]);
-    return $stmt->fetch(Pdo::FETCH_ASSOC);
+    $predict = $stmt->fetch(Pdo::FETCH_ASSOC);
+    if (empty($predict)) {
+        $app->log->error("no predict {$id}");
+        throw new Exception("no predict", 1);
+    }
+    $predict['defend'] = get_defend($id);
+    return $predict;
 }
 
 function get_user_id()
@@ -91,15 +125,20 @@ function get_user_by_name($username, $password)
     return false;
 }
 
-function create_attitude($request)
+function create_attitude($predict_id, $is_defend, $points)
 {
+    $user_id = get_user_id();
+    $user = get_user($user_id);
+    if ($user['points'] < $points) {
+        return [null, 'you have only $user[points] points, not enough'];
+    }
     $id = insert('user_predict', [
-        'user_id' => get_user_id(),
-        'predict_id' => $request->post('predict_id'),
-        'is_defend' => $request->post('is_defend'),
-        'reason' => $request->post('reason'),
+        'user_id' => $user_id,
+        'predict_id' => $predict_id,
+        'is_defend' => $is_defend,
+        'points' => $points
     ]);
-    return [$id, []];
+    return [$id, null];
 }
 
 function get_attitude_list($predict_id)
