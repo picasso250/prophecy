@@ -1,0 +1,18 @@
+<div>
+  <span><?= $predict['defend'][1]['count'] ?> agree</span>
+  <?php if ($predict['my_attitude'] === '1'): ?>
+    include me
+  <?php elseif ($predict['my_attitude'] === false && get_user_id()): ?>
+    <input type="text" id="Points<?= $predict['id'] ?>" value="<?= $predict['bet_pts'] ?>">pts
+    <button class="bet-button" data-id="<?= $predict['id'] ?>" data-defend="1">Place</button><?= $predict['total_points'] / ($predict['defend'][1]['count']+1) ?> pts if wins
+  <?php endif ?>
+</div>
+<div>
+  <span><?= $predict['defend'][0]['count'] ?> disagree</span>
+  <?php if ($predict['my_attitude'] === '0'): ?>
+    include me
+  <?php elseif ($predict['my_attitude'] === false && get_user_id()): ?>
+    <input type="text" id="Points<?= $predict['id'] ?>" value="<?= $predict['bet_pts'] ?>">pts
+    <button class="bet-button" data-id="<?= $predict['id'] ?>" data-defend="0">Place</button><?= $predict['total_points'] / ($predict['defend'][0]['count']+1) ?> pts if wins
+  <?php endif ?>
+</div>

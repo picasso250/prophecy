@@ -65,7 +65,11 @@ function get_predict($id)
         $app->log->error("no predict {$id}");
         throw new Exception("no predict", 1);
     }
-    $predict['defend'] = get_defend($id);
+    var_dump($predict);
+    $user_id = get_user_id();
+    $predict['my_attitude'] = $user_id ? get_attitude($predict['id'], $user_id) : false;
+    $predict['defend'] = $defend = get_defend($id);
+    $predict['total_points'] = $defend[0]['total'] + $defend[1]['total'];
     return $predict;
 }
 
@@ -154,7 +158,7 @@ function create_attitude($predict_id, $is_defend, $points)
 
 function get_attitude_list($predict_id)
 {
-    $sql = 'SELECT u.id, u.name, up.is_defend, points FROM user_predict AS up JOIN user AS u ON up.user_id=u.id WHERE predict_id=?';
+    $sql = 'SELECT u.id, u.name, up.is_defend, up.points FROM user_predict AS up JOIN user AS u ON up.user_id=u.id WHERE predict_id=?';
     $stmt = exec_sql($sql, [$predict_id]);
     return $stmt->fetchAll(Pdo::FETCH_ASSOC);
 }

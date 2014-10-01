@@ -2,8 +2,7 @@
 <div>create by <?= $predict['name'] ?></div>
 <div>we will check it on <?= $predict['valid_date'] ?></div>
 <div>
-  <div><?= $predict['defend_yes'] ?> agree</div>
-  <div><?= $predict['defend_no'] ?> disagree</div>
+  <?php include __DIR__.'/attitude.html' ?>
 </div>
 <p><?= htmlspecialchars($predict['descript']) ?></p>
 
