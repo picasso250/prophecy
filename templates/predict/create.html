@@ -1,17 +1,20 @@
 <form>
-	<?php if (isset($flash['message'])): ?>
-		<div><?= $flash['message']) ?></div>
-	<?php endif ?>
-	<div>
-    <input type="text" name="title" value="<?= $this->getFlashValue('title') ?>">
-  </div>
-	<div>
-		<textarea name="descript"><?= $this->getFlashValue('descript') ?></textarea>
+  <?php if (isset($flash['message'])): ?>
+    <div><?= $flash['message'] ?></div>
+  <?php endif ?>
+  <div>
+    <label>title: <input type="text" name="title" value="<?= $this->getFlashValue('title') ?>"></label>
   </div>
   <div>
-  	<input type="text" name="valid_date" value="<?= $this->getFlashValue('valid_date') ?>">
+    <label>
+      description:<br>
+      <textarea name="descript"><?= $this->getFlashValue('descript') ?></textarea>
+    </label>
   </div>
   <div>
-  	<input type="submit">
+    <label>will check on date: <input type="text" name="valid_date" value="<?= $this->getFlashValue('valid_date') ?>" class="date_input"></label>
+  </div>
+  <div>
+    <input type="submit">
   </div>
 </form>

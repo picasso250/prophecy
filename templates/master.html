@@ -2,6 +2,12 @@
 <html>
 <head>
   <title><?= $this->get('title') ?: 'predict' ?></title>
+  <link rel="stylesheet" href="/assets/date_input.css" type="text/css">
+  <script type="text/javascript" src="/assets/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="/assets/jquery.date_input.js"></script>
+  <script type="text/javascript">
+  $($.date_input.initialize);
+  </script>
 </head>
 <body>
 <header>

@@ -36,6 +36,12 @@ function get_user_id()
     return isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 }
 
+function get_user($id)
+{
+    $stmt = exec_sql('SELECT * FROM user WHERE id=? limit 1', [$id]);
+    return $stmt->fetch(Pdo::FETCH_ASSOC);
+}
+
 function create_predict($request)
 {
     insert([

@@ -28,14 +28,14 @@ session_cache_limiter(false);
 session_start();
 
 if ($id = get_user_id()) {
-    $view->view->setData('current_user', get_user($id));
+    $app->view->setData('current_user', get_user($id));
 }
 $app->get('/', function () use($app) {
     $predict_list = get_predict_list();
     $app->render('index', compact('predict_list'));
 });
 
-$app->group('/api', function () use ($app) {
+$app->group('/predict', function () use ($app) {
     $app->get('/:id', function ($id) {
         $predict = get_predict($id);
         $attitude_list = get_attitude_list($id);
@@ -75,7 +75,7 @@ $app->post('/login', function () use ($app) {
     }
 });
 
-$app->get('/login_out', function () use ($app) {
+$app->get('/logout', function () use ($app) {
     $_SESSION['user_id'] = 0;
     $app->redirect('/');
 });
@@ -86,7 +86,7 @@ $app->error(function (\Exception $e) use ($app) {
 });
 
 $app->notFound(function () use ($app) {
-    $app->render('404.html');
+    $app->render('404');
 });
 
 $app->run();

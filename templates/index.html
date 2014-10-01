@@ -1,3 +1,6 @@
+<?php if (get_user_id()): ?>
+<a href="/predict/create">create a predict</a>
+<?php endif ?>
 <ul>
   <?php foreach($predict_list as $predict): ?>
     <li>
