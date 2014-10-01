@@ -1,8 +1,10 @@
-<h1><?= htmlspecialchars($predict['title']) ?></h1>
+<h2><?= htmlspecialchars($predict['title']) ?></h2>
+<div>create by <?= $predict['name'] ?></div>
+<div>we will check it on <?= $predict['valid_date'] ?></div>
 <p><?= htmlspecialchars($predict['descript']) ?></p>
 
 <ul>
   <?php foreach ($attitude_list as $attitude): ?>
     <li><?= htmlspecialchars($attitude['name']) ?> <?= $attitude['is_defend'] ?></li>
-  }
+  <?php endforeach ?>
 </ul>

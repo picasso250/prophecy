@@ -1,18 +1,27 @@
-<form>
+<form method="post">
   <?php if (isset($flash['message'])): ?>
     <div><?= $flash['message'] ?></div>
   <?php endif ?>
   <div>
-    <label>title: <input type="text" name="title" value="<?= $this->getFlashValue('title') ?>"></label>
+    <?php if (isset($flash['err_msg']['title'])): ?>
+      <div class="text-error"><?= $flash['err_msg']['title'] ?></div>
+    <?php endif ?>
+    <label>title: <input type="text" name="title" value="<?= $this->getFlashRequestValue('title') ?>"></label>
   </div>
   <div>
+    <?php if (isset($flash['err_msg']['descript'])): ?>
+      <div class="text-error"><?= $flash['err_msg']['descript'] ?></div>
+    <?php endif ?>
     <label>
       description:<br>
-      <textarea name="descript"><?= $this->getFlashValue('descript') ?></textarea>
+      <textarea name="descript"><?= $this->getFlashRequestValue('descript') ?></textarea>
     </label>
   </div>
   <div>
-    <label>will check on date: <input type="text" name="valid_date" value="<?= $this->getFlashValue('valid_date') ?>" class="date_input"></label>
+    <?php if (isset($flash['err_msg']['valid_date'])): ?>
+      <div class="text-error"><?= $flash['err_msg']['valid_date'] ?></div>
+    <?php endif ?>
+    <label>we will check it on date: <input type="text" name="valid_date" value="<?= $this->getFlashRequestValue('valid_date') ?>" class="date_input"></label>
   </div>
   <div>
     <input type="submit">

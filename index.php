@@ -36,7 +36,7 @@ $app->get('/', function () use($app) {
 });
 
 $app->group('/predict', function () use ($app) {
-    $app->get('/:id', function ($id) {
+    $app->get('/:id', function ($id) use ($app) {
         $predict = get_predict($id);
         $attitude_list = get_attitude_list($id);
         $app->render('predict/show', compact('predict', 'attitude_list'));
@@ -52,6 +52,7 @@ $app->group('/predict', function () use ($app) {
             $app->redirect('/predict/'.$id);
         } else {
             $app->flash('err_msg', $err_msg);
+            $app->flash('request', $request->params());
             $app->redirect('/predict/create');
         }
     });

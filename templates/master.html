@@ -3,21 +3,43 @@
 <head>
   <title><?= $this->get('title') ?: 'predict' ?></title>
   <link rel="stylesheet" href="/assets/date_input.css" type="text/css">
+  <link rel="stylesheet" href="/assets/screen.css" type="text/css">
   <script type="text/javascript" src="/assets/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="/assets/jquery.date_input.js"></script>
+  <script type="text/javascript" src="/assets/jquery.date_input.zh_CN.js"></script>
   <script type="text/javascript">
+  $.extend(DateInput.DEFAULT_OPTS, {
+    stringToDate: function(string) {
+      var matches;
+      if (matches = string.match(/^(\d{4,4})-(\d{2,2})-(\d{2,2})/)) {
+        return new Date(matches[1], matches[2] - 1, matches[3]);
+      } else {
+        return null;
+      };
+    },
+
+    dateToString: function(date) {
+      var month = (date.getMonth() + 1).toString();
+      var dom = date.getDate().toString();
+      if (month.length == 1) month = "0" + month;
+      if (dom.length == 1) dom = "0" + dom;
+      return date.getFullYear() + "-" + month + "-" + dom + ' 00:00:00';
+    }
+  });
   $($.date_input.initialize);
   </script>
 </head>
 <body>
 <header>
-  <h1>predict</h1>
+  <div class="pull-right">
   <?php if(get_user_id()): ?>
     <?= $current_user['name'] ?>
     <a href="/logout">logout</a>
   <?php else: ?>
     <a href="/login">login</a>
   <?php endif; ?>
+  </div>
+  <h1>predict</h1>
 </header>
 <?php include $_inner_view; ?>
 </body>

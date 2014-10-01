@@ -1,0 +1,13 @@
+.pull-right {
+	float: right;
+}
+
+.text-info {
+	color: grey;
+}
+.text-warning {
+	color: yellow;
+}
+.text-error {
+	color: red;
+}
