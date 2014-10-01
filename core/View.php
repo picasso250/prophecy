@@ -26,7 +26,7 @@ class View extends \Slim\View
     public function getFlashRequestValue($name)
     {
         if ($flash = $this->get('flash')) {
-            return isset($flash['request'][$name]) ? htmlspecialchars($flash['request'][$name]) : '';
+            return isset($flash['request'][$name]) ? htmlspecialchars(html_entity_decode($flash['request'][$name])) : '';
         } else {
             return '';
         }
