@@ -21,6 +21,12 @@ function insert($table, $values)
     return $db->lastInsertId();
 }
 
+function get_attitude($predict_id, $user_id)
+{
+    $sql = 'SELECT is_defend FROM user_predict WHERE predict_id=? and user_id=?';
+    $stmt = exec_sql($sql, [$predict_id, $user_id]);
+    return $stmt->fetchColumn();
+}
 function get_predict_list()
 {
     $stmt = exec_sql('SELECT * FROM predict ORDER BY id desc limit 100');
@@ -28,8 +34,7 @@ function get_predict_list()
     $user_id = get_user_id();
     foreach ($predict_list as &$predict) {
         $predict_id = $predict['id'];
-        $stmt = exec_sql('SELECT is_defend FROM user_predict WHERE predict_id=? and user_id=?', [$predict_id, $user_id]);
-        $predict['my_attitude'] = $stmt->fetchColumn();
+        $predict['my_attitude'] = $user_id ? get_attitude($predict_id, $user_id) : false;
         $predict['bet_pts'] = 100;
         $defend = get_defend($predict_id);
         $predict['defend'] = $defend;
@@ -38,9 +43,10 @@ function get_predict_list()
     return $predict_list;
 }
 
-function get_defend($id)
+function get_defend($predict_id)
 {
-    $stmt = exec_sql('SELECT is_defend, count(*) as `count`, sum(points) as `total` FROM user_predict GROUP BY is_defend ORDER BY is_defend ASC');
+    $sql = 'SELECT is_defend, count(*) as `count`, sum(points) as `total` FROM user_predict WHERE predict_id=? GROUP BY is_defend ORDER BY is_defend ASC';
+    $stmt = exec_sql($sql, [$predict_id]);
     $rows = $stmt->fetchAll(Pdo::FETCH_ASSOC);
     $default = ['count' => 0, 'total' => 0];
     $ret = [$default, $default];
@@ -136,7 +142,7 @@ function create_attitude($predict_id, $is_defend, $points)
     if ($stmt->fetchColumn()) {
         return [null, 'you have showed your attitude'];
     }
-    
+
     $id = insert('user_predict', [
         'user_id' => $user_id,
         'predict_id' => $predict_id,
@@ -148,7 +154,19 @@ function create_attitude($predict_id, $is_defend, $points)
 
 function get_attitude_list($predict_id)
 {
-    $sql = 'SELECT u.id, u.name, up.is_defend FROM user_predict AS up JOIN user AS u ON up.user_id=u.id WHERE predict_id=?';
+    $sql = 'SELECT u.id, u.name, up.is_defend, points FROM user_predict AS up JOIN user AS u ON up.user_id=u.id WHERE predict_id=?';
     $stmt = exec_sql($sql, [$predict_id]);
     return $stmt->fetchAll(Pdo::FETCH_ASSOC);
+}
+
+function determin_predict($predict_id, $result)
+{
+    exec_sql('UPDATE predict SET result=? WHERE predict_id=?', [$result, $predict_id]);
+    $rows = get_attitude_list($predict_id);
+    foreach ($rows as $e) {
+        $user_id = $e['id'];
+        $points = $e['points'];
+        $points = $result ^ $e['is_defend'] ? -$points : $points;
+        exec_sql('UPDATE user SET points=points+? WHERE user_id=?', [$points, $user_id]);
+    }
 }
