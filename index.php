@@ -8,6 +8,7 @@ spl_autoload_register(function ($class) {
         require __DIR__."/".str_replace('\\', '/', $class).".php";
     }
 });
+require 'autoload.php';
 require 'vendor/autoload.php';
 require __DIR__.'/model.php';
 
@@ -22,7 +23,7 @@ $app->config(require $config_root.'/'.ENV_MODE.'.php');
 $log_resourse = fopen($app->config('log.path'), 'a');
 $app->config('log.writer', new \Slim\LogWriter($log_resourse));
 
-$db = new \Pdo($app->config('db.dsn'), $app->config('db.username'), $app->config('db.password'), $app->config('db.driver_options'));
+\DB::setAdapter(new \adapter\Mysql($app->config('db.dsn'), $app->config('db.username'), $app->config('db.password'), $app->config('db.driver_options')));
 $cache = $app->config('cache');
 
 session_cache_limiter(false);
@@ -124,7 +125,8 @@ $app->get('/login/confirm', function () use ($app, $cache) {
     $request = $app->request;
     $email = $request->get('email');
     $code = $request->get('code');
-    if ($user = check_email_code($email, $code)) {
+    $remember = $request->get('remember');
+    if ($user = check_email_code($email, $code, $remember)) {
         set_user_session($user['id']);
         $app->redirect('/');
     } else {
