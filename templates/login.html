@@ -3,12 +3,16 @@
     <div class="text-error"><?= $flash['message'] ?></div>
   <?php endif ?>
   <div>
-    <input type="text" name="username" value="<?= $this->getFlashValue('username') ?>" placeholder="username">
+    <input type="email" name="email" value="<?= $this->getFlashValue('email') ?>" placeholder="email">
+  </div>
+  <div>
+    <label><input type="checkbox" name="is_password" value="<?= $this->getFlashValue('is_password') ? 1 : 0 ?>" > use password</label>
   </div>
   <div>
     <input type="password" name="password" value="<?= $this->getFlashValue('password') ?>" placeholder="password">
+    <a href="/forget">forgot password</a>
   </div>
   <div>
-    <input type="submit" value="Login">
+    <input type="submit" value="Next">
   </div>
 </form>

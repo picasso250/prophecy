@@ -27,6 +27,7 @@ function get_attitude($predict_id, $user_id)
     $stmt = exec_sql($sql, [$predict_id, $user_id]);
     return $stmt->fetchColumn();
 }
+
 function get_predict_list()
 {
     $stmt = exec_sql('SELECT * FROM predict ORDER BY id desc limit 100');
@@ -122,13 +123,101 @@ function create_predict($request)
 
 function get_user_by_name($username, $password)
 {
-    $stmt = exec_sql('SELECT * FROM user WHERE name=? limit 1', [$username]);
+    $stmt = exec_sql('SELECT * FROM user WHERE name=? LIMIT 1', [$username]);
     $user = $stmt->fetch(Pdo::FETCH_ASSOC);
     list($salt, $encrypt) = explode(':', $user['password']);
     if (sha1($salt.$password) === $encrypt) {
         return $user;
     }
     return false;
+}
+function get_user_by_email_password($email, $password)
+{
+    $stmt = exec_sql('SELECT * FROM user WHERE email=? AND  LIMIT 1', [$email]);
+    $user = $stmt->fetch(Pdo::FETCH_ASSOC);
+    list($salt, $encrypt) = explode(':', $user['password']);
+    if (sha1($salt.$password) === $encrypt) {
+        return $user;
+    }
+    return false;
+}
+
+function login_user($email)
+{
+    $user = get_user_by_email($email);
+    if (is_user_verify_and_not_expired($user)) {
+        set_user_session($user['id']);
+    } else {
+        $code = make_code($email);
+        send_mail($email, $code);
+    }
+}
+
+function is_user_verify_and_not_expired($user)
+{
+    return ($user['is_verify'] && $user['is_remember'] && strtotime($user['remember_time']) + 365*24*3600 >= time());
+}
+
+function make_code($email)
+{
+    global $cache;
+    $code = sha1($email.'zzzzzzzzz213zzzzfefefefefeadferw45273agfaloiybviopwuefpyhwoehfb1sqpmvzdszzzxmahfpohdsofpow');
+    $cache->set(get_email_code_key($email), $code, 0, time()+30*60);
+    return $code;
+}
+
+function send_mail($email, $code)
+{
+    global $app;
+    $headers = implode("\r\n", ['From: 281055003@qq.com']);
+    $subject = 'please login';
+    $rs = mail($email, $subject, get_mail_content($email, $code), $headers);
+    $app->log->info("send mail '$subject' to $email, success ".intval($rs));
+}
+
+function get_mail_content($email, $code)
+{
+    $link = "http://$_SERVER[SERVER_NAME]/login/confirm?";
+    $query = ['email' => $email, 'code' => $code];
+    $once_link = $link.http_build_query($query);
+    $query['remember'] = 1;
+    $remember_link = $link.http_build_query($query);
+    return <<<EOC
+hello, $email:
+<br>
+you can click <a href="$once_link">$once_link</a> to login or input code $code
+<br>
+<a href="$remember_link">remember me</a>
+<br>
+the link will expire 30 min later.
+EOC;
+}
+
+function check_email_code($email, $code)
+{
+    global $cache;
+    $key = get_email_code_key($email);
+    $c = $cache->get($key);
+    if ($c && $code === $c) {
+        return get_user_by_email($email);
+    }
+    return false;
+}
+
+function get_email_code_key($email)
+{
+    return 'xc_'.$email.'_code';
+}
+function set_user_session($id)
+{
+    $_SESSION['user_id'] = $id;
+}
+
+function get_user_by_email($email)
+{
+    $stmt = exec_sql('SELECT * FROM user WHERE email=? LIMIT 1', [$email]);
+    $user = $stmt->fetch(Pdo::FETCH_ASSOC);
+    return $user;
 }
 
 function create_attitude($predict_id, $is_defend, $points)

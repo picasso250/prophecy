@@ -23,6 +23,7 @@ $log_resourse = fopen($app->config('log.path'), 'a');
 $app->config('log.writer', new \Slim\LogWriter($log_resourse));
 
 $db = new \Pdo($app->config('db.dsn'), $app->config('db.username'), $app->config('db.password'), $app->config('db.driver_options'));
+$cache = $app->config('cache');
 
 session_cache_limiter(false);
 session_start();
@@ -45,6 +46,7 @@ $app->group('/predict', function () use ($app) {
     $app->get('/create', function () use ($app) {
         $app->render('predict/create');
     });
+
     $app->post('/create', function () use ($app) {
         $request = $app->request;
         list($id, $err_msg) = create_predict($request);
@@ -80,26 +82,62 @@ $app->get('/login', function () use ($app) {
 $app->post('/login', function () use ($app) {
     $request = $app->request;
     $username = $request->post('username');
+    $email = $request->post('email');
+    $is_password = $request->post('is_password');
     $password = $request->post('password');
-    if ($username && $password && $user = get_user_by_name($username, $password)) {
-        $_SESSION['user_id'] = $user['id'];
-        $app->redirect('/');
-    }
     $message = 'username or password not correct';
-    if (empty($username)) {
-        $message = 'empty username';
+    try {
+        if (empty($email)) {
+            throw new Exception("empty email", 1);
+        }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("not valid email $email", 1);
+        }
+        if ($is_password) {
+            if (empty($password)) {
+                throw new Exception("empty password", 1);
+            }
+            if (get_user_by_email_password($email, $password)) {
+                set_user_session($user['id']);
+                $app->redirect('/');
+            } else {
+                throw new Exception("password not correct", 1);
+            }
+        } else {
+            if (login_user($email)) {
+                $app->redirect('/');
+            } else {
+                $app->flash('email', $email);
+                $app->redirect('/login/send');
+            }
+        }
+    } catch (Exception $e) {
+        $app->flash('email', $email);
+        $app->flash('password', $password);
+        $app->flash('is_password', $is_password);
+        $app->flash('message', $e->getMessage());
+        $app->redirect('/login');
     }
-    if (empty($password)) {
-        $message = 'empty password';
+});
+
+$app->get('/login/confirm', function () use ($app, $cache) {
+    $request = $app->request;
+    $email = $request->get('email');
+    $code = $request->get('code');
+    if ($user = check_email_code($email, $code)) {
+        set_user_session($user['id']);
+        $app->redirect('/');
+    } else {
+        echo 'error';
     }
-    $app->flash('username', $username);
-    $app->flash('password', $password);
-    $app->flash('message', $message);
-    $app->redirect('/login');
+});
+
+$app->get('/login/send', function () use ($app, $cache) {
+    echo 'email send to '.$flash['email'];
 });
 
 $app->get('/logout', function () use ($app) {
-    $_SESSION['user_id'] = 0;
+    set_user_session(0);
     $app->redirect('/');
 });
 
